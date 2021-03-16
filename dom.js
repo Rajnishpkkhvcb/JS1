@@ -28,3 +28,15 @@ function changeStyling()
     }
 }
 }
+
+
+function tagname()
+{
+    var para=document.getElementsByTagName("p")
+    for (i=0;i<para.length;i++)
+    {
+        para[i].style.fontSize="25px"
+    }
+    
+}
+
