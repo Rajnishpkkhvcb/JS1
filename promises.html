@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Promises</title>
+</head>
+<body>
+
+	<script type="">
+		//Synchronous
+		console.log("start")
+		function myfun() {
+			 console.log("function")
+  		}
+  		myfun()
+  		console.log("end")
+
+
+  		//Asynchronous
+
+  		console.log("start")
+  		setTimeout(()=>{
+
+  			console.log("setTimeout")
+
+  		},2000)
+  		console.log("end")
+
+
+  		//callback
+
+  		console.log("start")
+  		function getName(name,callback)
+  		{
+  			setTimeout(()=>{
+  		 		console.log("inside timeout")
+  				callback(name)
+
+
+  			},2000)
+
+  			}
+  			const nm=getName('Raj',(nm)=>{console.log(nm)})
+
+			console.log("end")
+
+			//promises
+
+const promiseObj1=new Promise((resolve,reject)=>{
+
+	let req=true
+	if(req==true){
+		resolve("Request Succes")
+	}
+	else{
+		reject("Request Failed for some reason")
+	}
+});
+
+promiseObj1.then(
+		(value)=>{console.log(value)},
+		(error)=>{console.log(value)}
+
+
+	)
+
+
+function createPost(post){
+
+	return new Promise((resolve,reject)=>{
+		setTimeout(()=>{
+
+
+			posts.push(post);
+
+			const error=true
+			if(!error){
+
+				resolve()
+
+			}else{
+				reject("Error:Something Went wrong")
+			}
+		},2000)
+	})
+}
+function updateLastUserActivityTime(){
+
+	return new Promise((resolve,reject)=>{
+
+
+	})
+
+
+}
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+  		
+
+
+	</script>
+
+</body>
+</html>
